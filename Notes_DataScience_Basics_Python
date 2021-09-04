@@ -2,4 +2,29 @@ import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 
 
+Applying Decision Tree Model
+
 #Reading data from pandas
+file_path_file = '../somedirecotry/data.csv' # Path of the file to work on
+file_data = pd.read_csv(file_path_file)     #Read the csv file
+file_data.columns  #describe the features or columns on the dataset
+
+
+
+file_data =file.data.dropna(axis=0) this is to drop the not available values or missing values
+
+# Identify the column to be predicted
+
+y=file_data.Price
+
+features =['column1'..'column5']
+
+X=file+data[features]
+
+X.describe()
+
+model = DecisionTreeRegressor(random_state=1)
+
+model.fit(X,y)
+
+model.predict(X)
